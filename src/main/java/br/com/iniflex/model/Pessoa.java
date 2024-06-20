@@ -1,7 +1,12 @@
 package br.com.iniflex.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDate;
 
+@Getter
+@Setter
 public abstract class Pessoa {
     private String nome;
     private LocalDate dataNascimento;
@@ -11,23 +16,6 @@ public abstract class Pessoa {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
     }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public LocalDate getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(LocalDate dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
 
     @Override
     public String toString() {
